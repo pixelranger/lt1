@@ -88,7 +88,7 @@ const getJournal = async (userSession) => {
     });
 
     const response = await axios({
-        url: `https://${userSession.host}/webservice/restjson/server.php`,
+        url: `https://develop.skolkovo.d2.3dev.tech/webservice/restjson/server.php`,
         headers: {'Content-Type': 'application/json'},
         params: {
             moodlewsrestformat: "json",
@@ -152,18 +152,9 @@ const getSubmissions = async (assignmentId) => {
 const getAssignments = async (userSession) => {
     if(!userSession)
         return;
-    // const response = await axios({
-    //     url: `https://${userSession.host}/api/v1/courses/${user Session.courseId}/assignments`,
-    //     headers: {'Authorization': `Bearer ${tokens[userSession.host]}`},
-    //     params: {
-    //         per_page: 999
-    //     },
-    // }).catch((error) => {
-    //     console.log(error);
-    // });
 
     const response = await axios({
-        url: `https://${userSession.host}/webservice/restjson/server.php`,
+        url: `https://develop.skolkovo.d2.3dev.tech/webservice/restjson/server.php`,
         headers: {'Content-Type': 'application/json'},
         params: {
             moodlewsrestformat: 'json',
